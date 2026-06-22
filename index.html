@@ -3,332 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capybara VPN - Панель управления</title>
+    <title>DanyVPN</title>
     <style>
+        /* Стили для браузера */
         body { 
-            background-color: #f5f5f5; 
-            color: #1a1a1a; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
             margin: 0; 
-            padding: 0;
-        }
-        .header {
-            background: white;
             padding: 20px;
-            border-bottom: 1px solid #e5e5e5;
-        }
-        .status {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-        .status-dot {
-            width: 10px;
-            height: 10px;
-            background: #10b981;
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        h1 { 
-            margin: 0; 
-            font-size: 22px;
-            color: #1a1a1a;
-        }
-        .subtitle {
-            color: #666;
-            font-size: 13px;
-            margin-top: 5px;
         }
         .container { 
-            padding: 20px;
-            max-width: 600px;
-            margin: 0 auto;        }
-        .card {
-            background: white;
-            border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 16px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-        .usage-bar {
-            background: #f0f0f0;
-            height: 6px;
-            border-radius: 3px;
-            margin: 15px 0;
-            overflow: hidden;
-        }
-        .usage-fill {
-            background: linear-gradient(90deg, #3b82f6, #10b981);
-            height: 100%;
-            width: 2%;
-            border-radius: 3px;
-            transition: width 0.3s;
-        }
-        .usage-text {
-            display: flex;
-            justify-content: space-between;
-            font-size: 13px;
-            color: #666;
-        }
-        .server-item {
-            display: flex;
-            align-items: center;
-            padding: 12px;
-            background: #f9f9f9;
-            border-radius: 12px;
-            margin-bottom: 8px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .server-item:hover {
-            background: #f0f0f0;
-        }
-        .flag {
-            font-size: 24px;
-            margin-right: 12px;
-        }
-        .server-info {
-            flex: 1;
-        }
-        .server-name {
-            font-weight: 600;            font-size: 14px;
-            margin-bottom: 2px;
-        }
-        .server-protocol {
-            font-size: 12px;
-            color: #999;
-        }
-        .btn { 
-            display: block; 
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px; 
+            border-radius: 24px; 
             width: 100%; 
-            padding: 14px; 
-            margin-top: 12px;
-            border-radius: 12px; 
-            font-weight: 600; 
-            font-size: 15px; 
-            text-decoration: none; 
-            border: none; 
-            cursor: pointer; 
-            transition: 0.2s; 
-            box-sizing: border-box; 
-            text-align: center; 
+            max-width: 400px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
         }
-        .btn-primary { 
-            background-color: #3b82f6; 
-            color: white; 
-        }
-        .btn-primary:hover { 
-            background-color: #2563eb; 
-        }
-        .btn-outline { 
-            background-color: white; 
-            color: #3b82f6;
-            border: 2px solid #3b82f6; 
-        }
-        .btn-outline:hover { 
-            background-color: #f0f7ff; 
-        }
-        .alert {
-            background: #fef3c7;
-            border-left: 4px solid #f59e0b;
-            padding: 12px;
-            border-radius: 8px;
-            font-size: 13px;
-            margin-bottom: 16px;
-        }
-        .badge {
+        h1 { font-size: 32px; margin-bottom: 10px; }
+        .subtitle { opacity: 0.9; margin-bottom: 30px; }
+        .btn {
+            background: white;
+            color: #667eea;
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
             display: inline-block;
-            padding: 4px 8px;
-            background: #dbeafe;
-            color: #1e40af;            border-radius: 6px;
-            font-size: 11px;
-            font-weight: 600;
-            margin-left: 8px;
+            margin-top: 20px;
+            transition: transform 0.2s;
         }
-        .expire-date {
-            text-align: right;
-            font-size: 12px;
-            color: #999;
-            margin-top: 8px;
-        }
+        .btn:hover { transform: translateY(-2px); }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <div class="status">
-            <div class="status-dot"></div>
-            <span style="font-size: 14px; color: #10b981; font-weight: 600;">Активна</span>
-        </div>
-        <h1>🦫 Capybara VPN</h1>
-        <div class="subtitle">22.06.2026 23:24 | Автообновление ~ 1 ч.</div>
-    </div>
-
+    <!-- ЭТО УВИДЯТ ТОЛЬКО В БРАУЗЕРЕ -->
     <div class="container">
-        
-        <div class="alert">
-            ⚠️ <strong>Внимание:</strong> Вы подключили макс. количество устройств. В личном кабинете бота зайдите в «Устройства» и удалите лишнее. 496386
-        </div>
-
-        <div class="card">
-            <div class="usage-text">
-                <span>📊 Трафик</span>
-                <span id="usageText">210.9MB / 10.0GB</span>
-            </div>
-            <div class="usage-bar">
-                <div class="usage-fill" id="usageBar"></div>
-            </div>
-            <div class="expire-date">📅 Истекает: 23.06.2026</div>
-        </div>
-
-        <div class="card">
-            <h3 style="margin-top: 0; font-size: 16px;">🌍 Доступные серверы</h3>
-            
-            <div class="server-item" onclick="selectServer(0)">
-                <span class="flag">ℹ️</span>
-                <div class="server-info">
-                    <div class="server-name">Создано специально владельцем</div>
-                    <div class="server-protocol">VLESS / TCP</div>
-                </div>            </div>
-
-            <div class="server-item" onclick="selectServer(1)">
-                <span class="flag">🇩🇪</span>
-                <div class="server-info">
-                    <div class="server-name">ADMIN | Germany <span class="badge">Plus</span></div>
-                    <div class="server-protocol">VLESS / TCP</div>
-                </div>
-            </div>
-
-            <div class="server-item" onclick="selectServer(2)">
-                <span class="flag">🇺🇸</span>
-                <div class="server-info">
-                    <div class="server-name">ADMIN | USA <span class="badge">Plus</span></div>
-                    <div class="server-protocol">VLESS / TCP</div>
-                </div>
-            </div>
-
-            <div class="server-item" onclick="selectServer(3)">
-                <span class="flag">🇳</span>
-                <div class="server-info">
-                    <div class="server-name">ADMIN | Netherlands <span class="badge">Plus</span></div>
-                    <div class="server-protocol">VLESS / TCP</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <h3 style="margin-top: 0; font-size: 16px;">📱 Добавить в приложение</h3>
-            <button onclick="openInApp('v2ray')" class="btn btn-primary">Открыть в v2rayTun / happ</button>
-            <button onclick="openInApp('v2rayng')" class="btn btn-primary">Открыть в v2rayNG</button>
-            <button onclick="openInApp('hiddify')" class="btn btn-primary">Открыть в Hiddify</button>
-            <button onclick="copySubscription()" class="btn btn-outline">📋 Скопировать ссылку подписки</button>
-        </div>
-
-        <div class="card" style="background: #f8fafc;">
-            <div style="font-size: 13px; color: #666;">
-                <strong>Telegram бот:</strong> @capybaravpnbot<br>
-                <small>Протоколы: VLESS / TCP / REALITY / JSON</small>
-            </div>
-        </div>
-
+        <h1>🔐 DanyVPN</h1>        <div class="subtitle">Admin Panel</div>
+        <p>Это панель управления. Для подключения используйте ссылку подписки в VPN клиенте.</p>
+        <a href="javascript:copyLink()" class="btn">📋 Скопировать ссылку подписки</a>
     </div>
 
     <script>
         // =========================================================================
-        // НАСТРОЙКИ ПОДПИСКИ
+        // ПРОВЕРКА: если зашёл VPN клиент (Happ, v2rayNG и т.д.)
         // =========================================================================
         
-        // ССЫЛКА НА ЭТУ СТРАНИЦУ (замени на свою)        const subscriptionUrl = window.location.href.split('?')[0];
-        
-        // Серверы для подписки (замени на реальные когда будут)
-        const servers = [
-            "vless://00000000-0000-0000-0000-000000000000@127.0.0.1:1230?encryption=none&security=none&type=tcp#ℹ️ Создано специально владельцем",
-            "vless://00000000-0000-0000-0000-000000000001@127.0.0.1:1231?encryption=none&security=none&type=tcp#🇩🇪 ADMIN | Germany (Plus)",
-            "vless://00000000-0000-0000-0000-000000000002@127.0.0.1:1232?encryption=none&security=none&type=tcp#🇺🇸 ADMIN | USA (Plus)",
-            "vless://00000000-0000-0000-0000-000000000003@127.0.0.1:1233?encryption=none&security=none&type=tcp#🇳 ADMIN | Netherlands (Plus)"
-        ];
+        const ua = navigator.userAgent.toLowerCase();
+        const isVpnApp = ua.includes('v2ray') || 
+                        ua.includes('shadowrocket') || 
+                        ua.includes('streisand') ||
+                        ua.includes('hiddify') ||
+                        ua.includes('sing-box') ||
+                        ua.includes('nekobox') ||
+                        window.location.href.includes('raw');
 
-        // =========================================================================
-        // ПРОВЕРКА: если VPN-клиент запрашивает подписку — отдаём base64
-        // =========================================================================
-        
-        const userAgent = navigator.userAgent.toLowerCase();
-        const isVpnClient = userAgent.includes('v2ray') || 
-                           userAgent.includes('shadowrocket') || 
-                           userAgent.includes('streisand') ||
-                           userAgent.includes('hiddify') ||
-                           window.location.search.includes('raw');
-
-        if (isVpnClient) {
-            // Отдаём подписку в формате base64
-            const base64Config = btoa(unescape(encodeURIComponent(servers.join('\n'))));
-            document.body.innerHTML = base64Config;
+        if (isVpnApp) {
+            // ЭТО УВИДИТ HAPP И ДРУГИЕ VPN ПРИЛОЖЕНИЯ
+            // Формируем подписку с серверами
+            
+            const servers = [
+                "vless://00000000-0000-0000-0000-000000000000@127.0.0.1:1230?encryption=none&security=none&type=tcp#ℹ️+DanyVPN+Admin+Version",
+                "vless://00000000-0000-0000-0000-000000000001@127.0.0.1:1231?encryption=none&security=none&type=tcp#🕵️+Выдано+владельцем+подписки",
+                "vless://00000000-0000-0000-0000-000000000002@127.0.0.1:1232?encryption=none&security=none&type=tcp#↓+Сервера",
+                "vless://00000000-0000-0000-0000-000000000003@127.0.0.1:1233?encryption=none&security=none&type=tcp#🇩🇪+ADMIN+|+Germany+(Plus)",
+                "vless://00000000-0000-0000-0000-000000000004@127.0.0.1:1234?encryption=none&security=none&type=tcp#🇺🇸+ADMIN+|+USA+(Plus)",
+                "vless://00000000-0000-0000-0000-000000000005@127.0.0.1:1235?encryption=none&security=none&type=tcp#🇳🇱+ADMIN+|+Netherlands+(Plus)"
+            ];
+            
+            // Соединяем все серверы в одну строку через перенос
+            const subscriptionText = servers.join('\n');
+            
+            // Кодируем в base64 (как требуют VPN клиенты)
+            const base64 = btoa(unescape(encodeURIComponent(subscriptionText)));
+            
+            // Очищаем страницу и показываем только base64
+            document.body.innerHTML = '<pre style="white-space: pre-wrap; word-break: break-all; padding: 20px;">' + base64 + '</pre>';
             document.body.style.background = 'white';
             document.body.style.color = 'black';
-            document.body.style.padding = '20px';
-            document.body.style.fontFamily = 'monospace';
             
-            // Для некоторых клиентов нужно установить заголовок (не всегда работает с чистого HTML)
-            console.log('Subscription served as base64');
+            // Для некоторых клиентов нужно установить заголовок
+            console.log('Serving VPN subscription');
         }
 
-        // =========================================================================
-        // ФУНКЦИИ ИНТЕРФЕЙСА
-        // =========================================================================
-
-        function openInApp(appType) {
-            let deepLink = '';
-            const encodedUrl = encodeURIComponent(subscriptionUrl);
-            
-            switch(appType) {
-                case 'v2ray':
-                    // Для v2rayTun / happ
-                    deepLink = `v2ray://install-sub?url=${encodedUrl}&name=CapybaraVPN`;
-                    break;
-                case 'v2rayng':
-                    deepLink = `v2rayng://install-sub?url=${encodedUrl}&name=CapybaraVPN`;
-                    break;                case 'hiddify':
-                    deepLink = `hiddify://import/${encodedUrl}#CapybaraVPN`;
-                    break;
-            }
-            
-            // Пробуем открыть
-            window.location.href = deepLink;
-            
-            // Если не сработало через 2 секунды — показываем инструкцию
-            setTimeout(() => {
-                if (document.visibilityState === 'visible') {
-                    alert('Если приложение не открылось:\n1. Скопируйте ссылку подписки\n2. Вставьте вручную в приложении');
-                }
-            }, 2000);
-        }
-
-        function copySubscription() {
-            navigator.clipboard.writeText(subscriptionUrl).then(() => {
-                alert('✅ Ссылка скопирована!\n\nТеперь:\n1. Откройте v2rayTun / happ / v2rayNG\n2. Нажмите "+" или "Добавить подписку"\n3. Вставьте ссылку');
-            });
-        }
-
-        function selectServer(index) {
-            alert(`Сервер выбран: ${servers[index].split('#')[1]}\n\nДля подключения используйте кнопки выше или скопируйте ссылку подписки`);
-        }
-
-        // Обновление статистики (имитация)
-        function updateStats() {
-            const used = 210.9; // MB
-            const total = 10240; // MB (10 GB)
-            const percent = (used / total) * 100;
-            
-            document.getElementById('usageBar').style.width = percent + '%';
-            document.getElementById('usageText').textContent = `${used}MB / ${(total/1024).toFixed(1)}GB`;
-        }
-
-        updateStats();
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert('✅ Ссылка скопирована!\nВставьте её в Happ/v2rayNG в раздел "Подписки"');        }
     </script>
 
 </body>
