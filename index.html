@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DanyVPN - Панель Администратора</title>
+    
+    <!-- Мета-теги для VPN клиентов -->
+    <meta http-equiv="Content-Disposition" content="inline; filename=DanyVPN">
+    <meta name="subscription-userinfo" content="upload=0; download=0; total=0; expire=0">
+    <meta name="profile-update-interval" content="24">
+    <meta name="profile-title" content="DanyVPN">
+    <meta name="profile-web-page-url" content="https://frozy.github.io/VPNTest/">
+    
     <style>
         body { 
             background-color: #0f172a; 
@@ -39,15 +47,15 @@
             font-size: 15px; 
             text-decoration: none; 
             border: none; 
-            cursor: pointer; 
-            transition: 0.2s; 
+            cursor: pointer;             transition: 0.2s; 
             box-sizing: border-box; 
             text-align: center; 
         }
         .btn-primary { background-color: #3b82f6; color: white; }
         .btn-primary:hover { background-color: #2563eb; }
         .btn-outline { background-color: transparent; color: #3b82f6; border: 2px solid #3b82f6; }
-        .btn-outline:hover { background-color: rgba(59, 130, 246, 0.1); }        .btn-accent { background-color: #10b981; color: white; }
+        .btn-outline:hover { background-color: rgba(59, 130, 246, 0.1); }
+        .btn-accent { background-color: #10b981; color: white; }
         .btn-accent:hover { background-color: #059669; }
         .badge { background-color: #ef4444; color: white; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: bold; display: inline-block; margin-bottom: 15px; }
     </style>
@@ -73,7 +81,6 @@
     </div>
 
     <script>
-        // Проверяем, кто зашёл
         const ua = navigator.userAgent.toLowerCase();
         const isVpnApp = ua.includes('v2ray') || 
                         ua.includes('shadowrocket') || 
@@ -85,19 +92,22 @@
                         ua.includes('happ');
 
         if (isVpnApp) {
-            // Для VPN клиентов - показываем ТОЛЬКО подписку
             document.body.innerHTML = '';
             document.body.style.background = 'white';
             document.body.style.color = 'black';
             document.body.style.padding = '20px';
-            document.body.style.fontFamily = 'monospace';
-            document.body.style.whiteSpace = 'pre-wrap';
+            document.body.style.fontFamily = 'monospace';            document.body.style.whiteSpace = 'pre-wrap';
             
             const subscription = `#profile-title: DanyVPN
+#profile-web-page-url: https://frozy.github.io/VPNTest/
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
+#profile-update-interval: 24
 #
-# 👑 DanyVPN Admin Version# 🕵️ Выдано владельцем подписки
+# ═══════════════════════════════════════
+# 👑 DanyVPN Admin Version
+# 🕵️ Выдано владельцем подписки
 # ↓ Сервера
+# ═══════════════════════════════════════
 #
 vless://00000000-0000-0000-0000-000000000000@127.0.0.1:1230?encryption=none&security=none&type=tcp#ℹ️+Admin+версия+VPN-клиента+DanyVPN
 vless://00000000-0000-0000-0000-000000000001@127.0.0.1:1231?encryption=none&security=none&type=tcp#🕵️+Создано+специально+владельцем
@@ -106,9 +116,14 @@ vless://00000000-0000-0000-0000-000000000003@127.0.0.1:1233?encryption=none&secu
 vless://00000000-0000-0000-0000-000000000004@127.0.0.1:1234?encryption=none&security=none&type=tcp#🇳🇱+ADMIN+|+Netherlands+(Plus)`;
             
             document.body.innerText = subscription;
+            
+            // Добавляем мета-теги динамически
+            const metaTitle = document.createElement('meta');
+            metaTitle.name = 'profile-title';
+            metaTitle.content = 'DanyVPN';
+            document.head.appendChild(metaTitle);
         }
 
-        // Функции для браузера
         function copySubUrl() {
             navigator.clipboard.writeText(window.location.href);
             alert("✅ Ссылка скопирована!\n\nВставьте её в Happ в раздел 'Подписки'");
@@ -116,18 +131,21 @@ vless://00000000-0000-0000-0000-000000000004@127.0.0.1:1234?encryption=none&secu
 
         function copyRawConfig() {
             const subscription = `#profile-title: DanyVPN
+#profile-web-page-url: https://frozy.github.io/VPNTest/
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
+#profile-update-interval: 24
 #
+# ═══════════════════════════════════════
 # 👑 DanyVPN Admin Version
 # 🕵️ Выдано владельцем подписки
 # ↓ Сервера
+# ═══════════════════════════════════════
 #
 vless://00000000-0000-0000-0000-000000000000@127.0.0.1:1230?encryption=none&security=none&type=tcp#ℹ️+Admin+версия+VPN-клиента+DanyVPN
 vless://00000000-0000-0000-0000-000000000001@127.0.0.1:1231?encryption=none&security=none&type=tcp#🕵️+Создано+специально+владельцем
 vless://00000000-0000-0000-0000-000000000002@127.0.0.1:1232?encryption=none&security=none&type=tcp#🇩+ADMIN+|+Germany+(Plus)
 vless://00000000-0000-0000-0000-000000000003@127.0.0.1:1233?encryption=none&security=none&type=tcp#🇺🇸+ADMIN+|+USA+(Plus)
-vless://00000000-0000-0000-0000-000000000004@127.0.0.1:1234?encryption=none&security=none&type=tcp#🇳🇱+ADMIN+|+Netherlands+(Plus)`;
-            
+vless://00000000-0000-0000-0000-000000000004@127.0.0.1:1234?encryption=none&security=none&type=tcp#🇳🇱+ADMIN+|+Netherlands+(Plus)`;            
             const base64Config = btoa(unescape(encodeURIComponent(subscription)));
             navigator.clipboard.writeText(base64Config);
             alert("✅ Base64 код скопирован!\n\nВ приложении выберите 'Импорт из буфера обмена'");
