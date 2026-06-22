@@ -1,10 +1,16 @@
 #profile-title: DanyVPN
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-update-interval: 24
+#profile-web-page-url: https://frozy.github.io/VPNTest/
 #
+# ═══════════════════════════════════════════
 # 👑 DanyVPN Admin Version
 # 🕵️ Выдано владельцем подписки
-# ↓ Сервера
+# ⚡ Безлимитный трафик
+#  Премиум серверы по всему миру
+# ═══════════════════════════════════════════
+#
+# ↓ Сервера ↓
 #
 vless://00000000-0000-0000-0000-000000000000@127.0.0.1:1230?encryption=none&security=none&type=tcp#ℹ️+Admin+версия+VPN-клиента+DanyVPN
 vless://00000000-0000-0000-0000-000000000001@127.0.0.1:1231?encryption=none&security=none&type=tcp#🕵️+Создано+специально+владельцем
