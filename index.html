@@ -47,7 +47,8 @@
         .btn-primary { background-color: #3b82f6; color: white; }
         .btn-primary:hover { background-color: #2563eb; }
         .btn-outline { background-color: transparent; color: #3b82f6; border: 2px solid #3b82f6; }
-        .btn-outline:hover { background-color: rgba(59, 130, 246, 0.1); }        .btn-accent { background-color: #10b981; color: white; }
+        .btn-outline:hover { background-color: rgba(59, 130, 246, 0.1); }
+        .btn-accent { background-color: #10b981; color: white; }
         .btn-accent:hover { background-color: #059669; }
         .badge { background-color: #ef4444; color: white; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: bold; display: inline-block; margin-bottom: 15px; }
     </style>
@@ -61,7 +62,6 @@
 
         <div class="section-title">📥 Добавить подписку</div>
         <button onclick="copySubUrl()" class="btn btn-primary">📋 Скопировать ссылку подписки</button>
-        <button onclick="copyRawConfig()" class="btn btn-accent">📋 Скопировать код (Base64)</button>
         
         <div class="section-title">ℹ️ Инструкция</div>
         <div style="text-align: left; font-size: 13px; color: #94a3b8; line-height: 1.6;">
@@ -74,29 +74,11 @@
 
     <script>
         // ВАЖНО: Замени на свой RAW URL!
-        const subUrl = "https://raw.githubusercontent.com/frozy/VPNTest/main/sub.txt";
+        const subUrl = "https://raw.githubusercontent.com/frozy/DanyVPN/main/sub.txt";
 
         function copySubUrl() {
             navigator.clipboard.writeText(subUrl);
             alert("✅ Ссылка скопирована!\n\nВставьте её в Happ в раздел 'Подписки'");
-        }
-
-        function copyRawConfig() {
-            const subscription = `#profile-title: DanyVPN
-#subscription-userinfo: upload=0; download=0; total=0; expire=0
-#
-# 👑 DanyVPN Admin Version
-# 🕵️ Выдано владельцем подписки
-# ↓ Сервера
-#
-vless://00000000-0000-0000-0000-000000000000@127.0.0.1:1230?encryption=none&security=none&type=tcp#ℹ️+Admin+версия+VPN-клиента+DanyVPN
-vless://00000000-0000-0000-0000-000000000001@127.0.0.1:1231?encryption=none&security=none&type=tcp#🕵️+Создано+специально+владельцем
-vless://00000000-0000-0000-0000-000000000002@127.0.0.1:1232?encryption=none&security=none&type=tcp#🇩+ADMIN+|+Germany+(Plus)
-vless://00000000-0000-0000-0000-000000000003@127.0.0.1:1233?encryption=none&security=none&type=tcp#🇺🇸+ADMIN+|+USA+(Plus)
-vless://00000000-0000-0000-0000-000000000004@127.0.0.1:1234?encryption=none&security=none&type=tcp#🇳🇱+ADMIN+|+Netherlands+(Plus)`;
-            
-            const base64Config = btoa(unescape(encodeURIComponent(subscription)));
-            navigator.clipboard.writeText(base64Config);            alert("✅ Base64 код скопирован!\n\nВ приложении выберите 'Импорт из буфера обмена'");
         }
     </script>
 
