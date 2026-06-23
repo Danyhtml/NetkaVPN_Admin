@@ -1,8 +1,9 @@
-#profile-title: DanyVPN
+#profile-title: NetkaVPN
 #subscription-userinfo: upload=0; download=0; total=0; expire=2097792000
-#announce: ℹ️ Admin версия VPN-подписки DanyVPN  |  🕵️ Подписка специально создана владельцем  |  🗄️ Сервера тут ↓
+#announce: ℹ️ Admin версия VPN-подписки NetkaVPN  |  🕵️ Подписка специально создана владельцем  |  🗄️ Сервера тут ↓
 #profile-update-interval: 1
 #profile-web-page-url: https://frozy.github.io/DanyVPN/
+#support-url: https://t.me/NetkaVPN
 #
 # ↓ Сервера ↓
 #
