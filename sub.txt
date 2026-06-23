@@ -1,6 +1,6 @@
 #profile-title: DanyVPN
 #subscription-userinfo: upload=0; download=0; total=0; expire=2097792000
-#announce: ℹ️ Admin версия VPN-подписки DanyVPN <br>🕵️ Подписка специально создана владельцем <br>🗄️ Сервера тут ↓
+#announce: base64:4oSWEIEFZG1pbiDQstC10YDRgdC40Y8gVlBOLdC/0L7QtNC/0LjRgdC60LggRGFueVZQTgogICAgICAg8J+Vte+4jSDQodC+0LfQtNCw0L3QviDRgdC/0LXRhtC40LDQu9GM0L3QviDQstC70LDQtNC10LvRjNGG0LXQvAog874jSDQodC10YDQstC10YDQwCDRgtGD0YIg4oaT
 #profile-update-interval: 1
 #profile-web-page-url: https://frozy.github.io/DanyVPN/
 #
