@@ -8,5 +8,6 @@
 # ↓ Сервера ↓
 #
 vless://1982241b-dc5a-4ed8-b21e-8a006f8b775f@fin1.panel11.ru:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=fin1.panel11.ru&fp=firefox&pbk=lQ8pnlOU0kqS77TA7Fftl8nSzktXLzFpOLGqCZEAhjg&sid=aaec521b22bbe6cb&type=tcp#🇫🇮+Финляндия+⚡
-vless://1982241b-dc5a-4ed8-b21e-8a006f8b775f@mold1.panel11.ru:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=mold1.panel11.ru&fp=firefox&pbk=fJwiGHzBjOmu3cW05jKdiNmRVUt3caHkRq_tk_vuKEU&sid=79c1328ea1b50765&type=tcp#🇲🇩+Молдова+
+vless://1982241b-dc5a-4ed8-b21e-8a006f8b775f@mold1.panel11.ru:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=mold1.panel11.ru&fp=firefox&pbk=fJwiGHzBjOmu3cW05jKdiNmRVUt3caHkRq_tk_vuKEU&sid=79c1328ea1b50765&type=tcp#🇲🇩+Молдова
+vless://1982241b-dc5a-4ed8-b21e-8a006f8b775f@swed1.panel11.ru:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=swed1.panel11.ru&fp=firefox&pbk=1WWB1FGvqk-jlkuu7w3gbjWTZsC5LKoTFR6rPlcAHlo&sid=c3af02397e6dce99&type=tcp#🇸🇪+Швеция
 vless://1982241b-dc5a-4ed8-b21e-8a006f8b775f@gr1.panel11.ru:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=gr1.panel11.ru&fp=firefox&pbk=rYwYudDb69CwjAJNw5KTFqJnRwwADgDMDpjv9KESjEY&sid=f5c14a97040a38bf&type=tcp#🇩🇪+Германия+⚡
