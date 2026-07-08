@@ -7,11 +7,5 @@
 #
 # ↓ Сервера ↓
 #
-vless://f9255507-1b65-433f-bfd8-193b35e068e2@45.149.12.140:80?type=ws&security=none&host=s5.868001.xyz&path=%2FTelegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3%2520%2540WangCai2#🇳🇱+Нидерланды+[⚡ Быстрый]
-vless://e4468d51-2528-4d40-a92d-5cf409d00dac@fry3.brocollisuper.click:443?type=grpc&security=tls&fp=firefox&serviceName=grpc-api#🇫🇷+Франция
-vless://27f2ae85-3e15-4a9a-9c71-49ee032e7b26@217.28.48.29:25752?encryption=none&type=tcp&headerType=none&host=%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI#🇱🇻+Латвия
-vless://f9255507-1b65-433f-bfd8-193b35e068e2@50.62.88.140:80?host=s5.868001.xyz&path=%2FTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2&security=none&type=ws#🇺🇸+Соедененные+Штаты+Америки
-vless://f9255507-1b65-433f-bfd8-193b35e068e2@45.80.111.140:80?host=s5.868001.xyz&path=%2FTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2&security=none&type=ws#🇩🇪+Германия
-vless://69a2af58-d74a-44ca-864a-e09b493f4274@45.144.48.119:443?type=tcp&security=reality&pbk=hgQ3Wa09f9ectEos7QyC1LQ8bBq8lEAcAtGIDFTKin0&fp=firefox&sni=www.intel.com&sid=c0&flow=xtls-rprx-vision#🇵🇱+Польша
-vless://7e6d3393-bb84-45c7-9eef-35de95805b7e@142.91.108.139:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=IOO3P6BDqBjUA0gB4tgpvxrXL6Fit88QgpJ1y6GYyz0&sid=0f4dacf88202e05f&sni=jp.api-yandex.net&serverName=jp.api-yandex.net#🇯🇵+Япония
-vless://f9255507-1b65-433f-bfd8-193b35e068e2@45.8.211.140:80?host=s5.868001.xyz&path=%2FTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2&security=none&type=ws#🇸🇬+Сингапур
+vless://1982241b-dc5a-4ed8-b21e-8a006f8b775f@mold1.panel11.ru:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=mold1.panel11.ru&fp=firefox&pbk=fJwiGHzBjOmu3cW05jKdiNmRVUt3caHkRq_tk_vuKEU&sid=79c1328ea1b50765&type=tcp#🇲🇩+Молдова+⚡
+vless://1982241b-dc5a-4ed8-b21e-8a006f8b775f@gr1.panel11.ru:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=gr1.panel11.ru&fp=firefox&pbk=rYwYudDb69CwjAJNw5KTFqJnRwwADgDMDpjv9KESjEY&sid=f5c14a97040a38bf&type=tcp#🇩🇪+Германия+⚡
