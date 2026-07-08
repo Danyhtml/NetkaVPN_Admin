@@ -2,6 +2,8 @@
 #subscription-userinfo: upload=107374182400; download=107374182400; total=107374182400; expire=1600000000
 #announce: ℹ️ Плюс версия VPN-подписки NetkaVPN  |  🕵️ Подписка специально создана владельцем  |  🗄️ Сервера тут ↓
 #profile-update-interval: 1
+#X-Profile-Status: expired
+#Profile-Status: expired
 #profile-web-page-url: https://Danyhtml.github.io/NetkaVPN_Admin/
 #support-url: https://t.me/NetkaVPN
 #
