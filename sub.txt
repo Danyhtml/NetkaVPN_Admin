@@ -1,6 +1,6 @@
 #profile-title: NetkaVPN+
 #subscription-userinfo: upload=0; download=0; total=0; expire=2097792000
-#announce: ℹ️ Admin версия VPN-подписки NetkaVPN  |  🕵️ Подписка специально создана владельцем  |  🗄️ Сервера тут ↓
+#announce: ℹ️ Плюс версия VPN-подписки NetkaVPN  |  🕵️ Подписка специально создана владельцем  |  🗄️ Сервера тут ↓
 #profile-update-interval: 1
 #profile-web-page-url: https://Danyhtml.github.io/NetkaVPN_Admin/
 #support-url: https://t.me/NetkaVPN
