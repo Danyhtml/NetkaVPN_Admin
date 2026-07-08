@@ -1,5 +1,5 @@
 #profile-title: NetkaVPN+
-#subscription-userinfo: upload=0; download=0; total=0; expire=1786124580
+#subscription-userinfo: upload=0; download=0; total=0; expire=1783522800
 #announce: ℹ️ Плюс версия VPN-подписки NetkaVPN  |  🕵️ Подписка специально создана владельцем  |  🗄️ Сервера тут ↓
 #profile-update-interval: 1
 #profile-web-page-url: https://Danyhtml.github.io/NetkaVPN_Admin/
@@ -7,5 +7,5 @@
 #
 # ↓ Сервера ↓
 #
-vless://1982241b-dc5a-4ed8-b21e-8a006f8b775f@mold1.panel11.ru:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=mold1.panel11.ru&fp=firefox&pbk=fJwiGHzBjOmu3cW05jKdiNmRVUt3caHkRq_tk_vuKEU&sid=79c1328ea1b50765&type=tcp#🇲🇩+Молдова+⚡
-vless://1982241b-dc5a-4ed8-b21e-8a006f8b775f@gr1.panel11.ru:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=gr1.panel11.ru&fp=firefox&pbk=rYwYudDb69CwjAJNw5KTFqJnRwwADgDMDpjv9KESjEY&sid=f5c14a97040a38bf&type=tcp#🇩🇪+Германия+⚡
+vless://00000000-0000-0000-0000-000000000000@example.com:443?encryption=none&security=tls&type=tcp#⚠️+Заплатите+100+Рублей+Данилу
+vless://00000000-0000-0000-0000-000000000000@example.com:443?encryption=none&security=tls&type=tcp#🚫+Доступ+Ограничен
